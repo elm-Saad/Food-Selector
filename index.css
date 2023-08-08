@@ -1,0 +1,310 @@
+:root{
+    --main-color:#2928e3;
+    --second-color:#00e4a0;
+    --darck-color:#0d041d;
+    --white-color:#Fff;
+    --main-boredr-radius:6px;
+    --main-transition-duration:.5s;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    user-select: none;
+}
+header{
+    height: 72px;
+    background-color: var(--darck-color);
+    color: var(--white-color);
+}
+header h2{
+    margin: 0; 
+}
+header h2 i{
+    margin-right: 10px;
+}
+header button{
+    padding: 10px 20px;
+    border: none;
+    border-radius:var(--main-boredr-radius) ;
+    background-color: var(--second-color);
+    font-weight: bold;
+    color: var(--white-color);
+    text-shadow: 0 0 3px black;
+    cursor: pointer;
+}
+
+/*repeated*/
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    padding:0 20px ;
+    margin: 0 auto;
+    width: 480px;
+    height: 72px;   
+}
+.highlight{
+    background-color: bisque;
+    accent-color: #faa43b;
+}
+.light-mode{
+    background-color: var(--second-color);
+}
+
+/*hero*/
+input[type="radio"]{
+    cursor: pointer;
+}
+main{
+    background-color: var(--main-color);
+    position: relative;
+    height: calc(100vh - 72px);
+    transition: all var(--main-transition-duration);
+}
+.item{
+    background-color: var(--second-color);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 220px;
+    height: 170px;
+    transition: all calc(var(--main-transition-duration) + .5s);
+}
+
+section .item img{
+    width: 60%;
+    height: 100%;
+    border-radius: 16% 64% 12% 63% / 0% 38% 35% 0%;
+}
+section .item .radio{
+    border-radius: 57% 31% 22% 30% / 45% 29% 55% 41%;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+section .item:nth-child(1){
+    bottom: 15%;
+    left: 35%;
+    border-radius: 36% 31% 22% 63% / 22% 18% 66% 62%;
+}
+
+section .item:nth-child(2){
+    bottom: 45%;
+    right: 10%;
+    border-radius: 25% 75% 15% 54% / 66% 75% 25% 18%;
+
+}
+section .item:nth-child(3){
+    right: 35%;
+    top:10%;
+    border-radius: 42% 29% 17% 63% / 49% 26% 67% 40%;
+}
+section .item:nth-child(4){
+    top: 20%;
+    left: 15%;
+    border-radius: 16% 80% 26% 63% / 21% 36% 55% 59%;
+}
+section .item:nth-child(5){
+    bottom: 5%;
+    right: 10%;
+    border-radius: 16% 80% 26% 63% / 21% 36% 55% 59%;
+}
+@media (max-width:890px) {
+    section .item:nth-child(1){
+        bottom: 8%;
+        left: 15%;
+    }
+    section .item:nth-child(2){
+        bottom: 35%;
+        right: 5%;
+    }
+    section .item:nth-child(3){
+        right: 30%;
+        top:5%;
+    }
+    section .item:nth-child(4){
+        top: 30%;
+        left: 10%;
+    }
+    section .item:nth-child(5){
+        bottom: 5%;
+        right: 10%;
+    }
+}
+@media (max-width:620px) {
+    section .item:nth-child(1){
+        bottom: 5%;
+        left: 5%;
+    }
+    section .item:nth-child(2){
+        bottom: 35%;
+        right: 5%;
+    }
+    section .item:nth-child(3){
+        right: 30%;
+        top:3%;
+    }
+    section .item:nth-child(4){
+        top: 30%;
+        left: 5%;
+    }
+    section .item:nth-child(5){
+        bottom: 5%;
+        right: 5%;
+    }
+}
+@media (max-width:515px) {
+    .container{
+        width: 80%; 
+    }
+    main{
+        height: calc(200vh);
+    }
+    section .item:nth-child(1){
+        bottom:calc(170px + 10%);
+        left:30%;
+    }
+    section .item:nth-child(2){
+        bottom: calc(340px + 20%);
+        right: 30%;
+    }
+    section .item:nth-child(3){
+        right: 30%;
+        top:5%;
+    }
+    section .item:nth-child(4){
+        top: calc(170px + 10%);
+        left: 30%;
+    }
+    section .item:nth-child(5){
+        bottom: 5%;
+        right: 30%;
+    }
+}
+
+/*choix-box*/
+.choix-box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 100px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 2px;
+    border: 1px solid var();
+    border-radius: 25% 0% 0% 25% / 25% 25% 25% 25%;
+    background-color: var(--second-color);
+    color:whitesmoke;
+    text-shadow: 0 0 5px black;
+    transition: background var(--main-transition-duration);
+}
+.theme-toggle-btn{
+    border-radius: 50%;
+    border: 2px solid var(--darck-color);
+    width: 40px;
+    height: 40px;
+    background-color: #efefef;
+    overflow: hidden;
+    justify-content: center;
+    transform: rotate(0deg);
+    transition: all 2s;
+}
+.rotate{
+    transform: rotate(360deg);
+}
+.drink-check{
+    flex-direction: column;
+}
+.dark-mode{
+    background-color: var(--main-color);
+}
+/* modal */
+.Recipes-modal,
+.drink-modal{
+    display: none; /*flex when displayed*/
+    position: fixed;
+    margin: auto;
+    padding: 5px;
+    top: 80px;
+    left: 0;
+    right: 0;
+    border: 1px solid #67595e;
+    border-radius: 5px;
+    width: 420px;
+    height: 510px;
+    background-color: #fff0ee;
+}
+.recipe-modal-inner,
+.drink-modal-inner{
+    flex-direction: column;
+    align-items: start;
+
+}
+.recipe-img{
+    max-width: 100%;
+    width: 200px;
+    max-height: 100%;
+    height: 190px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid var(--darck-color);
+    border-radius:var(--main-boredr-radius);
+}
+.recipe-modal-inner h2,
+.drink-modal-inner h2{
+    margin: 0 auto;
+    margin-bottom: 3px;
+    color:var(--second-color);
+    text-shadow: 0 0 1px black;
+}
+.ingredients-holder span,
+.recipe-holder span {
+    font-weight: bold;
+    text-shadow: 0 0 1px black;
+    color:var(--second-color);
+}
+.Ingredients,
+.recipe{
+    color: #363636;
+    padding: 3px 10px;
+    padding: 3px 10px;
+    font-size: 15px;
+
+}
+.recipe-modal-close-btn,
+.drink-modal-close-btn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+}
+.recipe-modal-close-btn:hover,
+.drink-modal-close-btn:hover{
+    color: white;
+    background-color: #bd301d;
+    border: 2px solid #bd301d;
+}
+.drink-modal{
+    right: 40%;
+    height: 310px;
+}
+.drink-modal-inner h2{
+    margin: 20px auto;
+}
